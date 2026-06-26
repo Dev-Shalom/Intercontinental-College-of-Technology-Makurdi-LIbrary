@@ -3,98 +3,113 @@ const STATIC_PASSWORD = import.meta.env.VITE_PASSWORD;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const loginPage = document.getElementById("login-page");
-  const mainPage = document.getElementById("main-page");
-  const loginForm = document.getElementById("login-form");
-  const usernameInput = document.getElementById("username");
-  const passwordInput = document.getElementById("password");
-  const errorMessage = document.getElementById("error-message");
-  const logoutBtn = document.getElementById("logout-btn");
+    const loginPage = document.getElementById("login-page");
+    const mainPage = document.getElementById("main-page");
+    const loginForm = document.getElementById("login-form");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const errorMessage = document.getElementById("error-message");
+    const logoutBtn = document.getElementById("logout-btn");
 
-  // Check that everything exists
-  if (
-    !loginPage ||
-    !mainPage ||
-    !loginForm ||
-    !usernameInput ||
-    !passwordInput ||
-    !errorMessage ||
-    !logoutBtn
-  ) {
-    console.error("Missing HTML elements:", {
-      loginPage,
-      mainPage,
-      loginForm,
-      usernameInput,
-      passwordInput,
-      errorMessage,
-      logoutBtn,
-    });
-    return;
-  }
+    // Hide page scrolling while login screen is visible
+    document.body.style.overflow = "hidden";
 
-  if (sessionStorage.getItem("isLoggedIn") === "true") {
-    showMainPage();
-  }
-
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const username = usernameInput.value.trim();
-    const password = passwordInput.value.trim();
-
+    // Check required elements
     if (
-      username === STATIC_USERNAME &&
-      password === STATIC_PASSWORD
+        !loginPage ||
+        !mainPage ||
+        !loginForm ||
+        !usernameInput ||
+        !passwordInput ||
+        !errorMessage ||
+        !logoutBtn
     ) {
-      sessionStorage.setItem("isLoggedIn", "true");
-
-      errorMessage.classList.add("hidden");
-
-      showMainPage();
-
-    } else {
-      errorMessage.classList.remove("hidden");
-
-      usernameInput.value = "";
-      passwordInput.value = "";
-
-      usernameInput.focus();
+        console.error("Missing HTML elements:", {
+            loginPage,
+            mainPage,
+            loginForm,
+            usernameInput,
+            passwordInput,
+            errorMessage,
+            logoutBtn
+        });
+        return;
     }
-  });
 
-  logoutBtn.addEventListener("click", function () {
-    sessionStorage.removeItem("isLoggedIn");
-    showLoginPage();
-  });
+    // If user already logged in
+    if (sessionStorage.getItem("isLoggedIn") === "true") {
+        showMainPage();
+    } else {
+        showLoginPage();
+    }
 
-  function showMainPage() {
+    // Login
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    loginPage.classList.add("hidden");
-    mainPage.classList.remove("hidden");
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
 
-    setTimeout(() => {
-      if (typeof window.initMainPage === "function") {
-        window.initMainPage();
-      } else {
-        console.error("window.initMainPage() not found.");
-      }
-    }, 0);
+        if (
+            username === STATIC_USERNAME &&
+            password === STATIC_PASSWORD
+        ) {
+            sessionStorage.setItem("isLoggedIn", "true");
 
-  }
+            errorMessage.classList.add("hidden");
 
-  function showLoginPage() {
+            showMainPage();
 
-    mainPage.classList.add("hidden");
-    loginPage.classList.remove("hidden");
+        } else {
 
-    usernameInput.value = "";
-    passwordInput.value = "";
+            errorMessage.classList.remove("hidden");
 
-    errorMessage.classList.add("hidden");
+            usernameInput.value = "";
+            passwordInput.value = "";
 
-    usernameInput.focus();
+            usernameInput.focus();
+        }
+    });
 
-  }
+    // Logout
+    logoutBtn.addEventListener("click", function () {
+        sessionStorage.removeItem("isLoggedIn");
+        showLoginPage();
+    });
+
+    // ----------------------------
+    // Show Main Page
+    // ----------------------------
+    function showMainPage() {
+
+        loginPage.classList.add("hidden");
+        mainPage.classList.remove("hidden");
+
+        // Allow scrolling after login
+        document.body.style.overflow = "auto";
+
+        if (typeof window.initMainPage === "function") {
+            window.initMainPage();
+        }
+    }
+
+    // ----------------------------
+    // Show Login Page
+    // ----------------------------
+    function showLoginPage() {
+
+        mainPage.classList.add("hidden");
+        loginPage.classList.remove("hidden");
+
+        // Prevent scrolling while on login page
+        document.body.style.overflow = "hidden";
+
+        usernameInput.value = "";
+        passwordInput.value = "";
+
+        errorMessage.classList.add("hidden");
+
+        usernameInput.focus();
+    }
 
 });
