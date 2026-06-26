@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intercontinental College of Technology Makurdi</title>
+  <meta name="description" content="A Directory of Intercontinental College of Technology Makurdi Electronic Databases and Library Resources" />
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="/src/main.js"></script>
+
+
+  <!-- <script type="module" crossorigin src="/assets/index-F4Jv_XFp.js"></script> -->
+</head>
+
+
+<body monica-id="ofpnmcalabcbjgholdjcjblkibolbppb" monica-version="7.9.7" cz-shortcut-listen="true">
+
+  <!-- Login Page -->
+<div id="login-page" class="min-h-screen bg-[url(/img/IntercontinentalUni.jpeg)] bg-no-repeat bg-cover bg-center flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-8">
+      <img
+        alt="Intercontinental College of Technology Makurdi"
+        class="mx-auto size-20 rounded-full mb-4"
+        src=""
+      />
+      <h1 class="text-2xl font-bold text-[#0c0e41]">Intercontinental College of Technology Makurdi</h1>
+      <p class="text-gray-600 mt-2">Library Databases & Electronic Resources</p>
+    </div>
+    
+    <form id="login-form">
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+        <input 
+          id="username" 
+          type="text" 
+          placeholder="Enter institution username" 
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c0e41] focus:border-transparent outline-none transition duration-200"
+          required
+        >
+      </div>
+      
+      <div class="mb-6">
+        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+        <div class="relative">
+          <input 
+            id="password" 
+            type="password" 
+            placeholder="Enter institution password" 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0c0e41] focus:border-transparent outline-none transition duration-200 pr-12"
+            required
+          >
+          <button
+            type="button"
+            onclick="togglePassword()"
+            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#0c0e41] transition duration-200 focus:outline-none"
+            aria-label="Toggle password visibility"
+          >
+            <!-- Eye Open Icon (visible when password is hidden) -->
+            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <!-- Eye Closed Icon (visible when password is shown) -->
+            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <button 
+        type="submit"
+        class="w-full bg-[#0c0e41] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#1a1f6b] transition duration-300 focus:ring-2 focus:ring-[#0c0e41] focus:ring-offset-2"
+      >
+        Login to Access Resources
+      </button>
+      
+      <p id="error-message" class="hidden text-red-500 text-center mt-4 text-sm">
+        Invalid username or password. Please contact the library administrator.
+      </p>
+    </form>
+    
+    <div class="mt-6 text-center text-sm text-gray-500">
+      <p>For login assistance, please contact the University Library</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const eyeOpen = document.getElementById('eye-open');
+    const eyeClosed = document.getElementById('eye-closed');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      eyeOpen.classList.add('hidden');
+      eyeClosed.classList.remove('hidden');
+    } else {
+      passwordInput.type = 'password';
+      eyeOpen.classList.remove('hidden');
+      eyeClosed.classList.add('hidden');
+    }
+  }
+</script>
+
+  <div id="main-page" class="hidden min-h-screen">
+    <div>
+      <div
+        class="bg-[url(/img/IntercontinentalUni.jpeg)] bg-black/75 bg-blend-overlay bg-cover py-10 px-3 md:px-6">
+        <button id="logout-btn" class="w-fit bg-white block text-black ml-auto py-1 px-4 cursor-pointer rounded-md hover:bg-gray-100 transition"
+          >
+            Logout</button><img
+            alt="MLU"
+            class="mx-auto size-20 sm:size-30 md:size-40 rounded-full mt-10"
+            src=""
+          />
+        <h1 class="text-lg sm:text-2xl md:text-4xl font-semibold text-center mt-4 py-4 px-2 text-white">
+          INTERCONTINENTAL COLLEGE OF TECHNOLOGY MAKURDI
+        </h1>
+        <h2
+          class="text-lg md:text-2xl font-medium bg-[#0c0e41] text-white text-center mt-2 py-4 px-4 rounded-md max-w-7xl mx-auto">
+          INTERCONTINENTAL COLLEGE OF TECHNOLOGY LIBRARY DATABASES AND ELECTRONIC RESOURCES.
+        </h2>
+      </div>
+  
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+          
+            <div class="bg-white rounded-md p-4">
+              <img
+                            alt="ProQuest"
+                            class="h-15 md:h-20 object-cover object-center"
+                            src="https://mue.cblibrary.ng/assets/proquest-D6r84CIe.jpg"
+                          />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">ProQuest</span> Central is a large
+                multidisciplinary database. It provides access to 47 complete
+                databases, with a variety of content types across over 175
+                subjects. It is the broadest single research database world in
+                the world.
+              </p>
+              <a href="https://explore.proquest.com/login"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+
+
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="AGORA"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="data:image/jpeg;base64,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"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">AGORA</span> database facilitates
+                access to outstanding digital library collections in the
+                fields of food, agriculture, environmental sciences and
+                related social sciences. It provides access to over 3000
+                journals to institutions in 106 countries.
+              </p>
+              <a href="http://login.research4life.org/tacgw/login.cshtml"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="OARE: Online Access to Research in the Environment (OARE)"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="data:image/jpeg;base64,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"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold"
+                    >OARE: Online Access to Research in the Environment
+                    (OARE)</span>
+                is an international public-private consortium that enables
+                access to collections of environmental science research
+              </p>
+              <a href="http://login.research4life.org/tacgw/login.cshtml"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="HINARI"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="data:image/jpeg;base64,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"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">HINARI</span> have up to 16,000
+                journals, 63,000 e-books, 105 other information resources that
+                are now available to health institutions in more than 120
+                countries, areas and territories benefiting many thousands of
+                health workers and researchers, and in turn, contributing to
+                improve world health.
+              </p>
+              <a href="http://login.research4life.org/tacgw/login.cshtml"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="ARDI"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="https://mue.cblibrary.ng/assets/ardi-DzyewkVf.jpg"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">ARDI</span> currently have over 100
+                publishers providing access to around 30,000 journals, books,
+                and reference works for 120 developing countries and
+                territories through ARDI.
+              </p>
+              <a href="https://login.research4life.org/tacgw/AppPortal/"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="African Journals OnLine (AJOL)"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="https://mue.cblibrary.ng/assets/ajol-HNxicgYu.jpg"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">African Journals OnLine (AJOL)</span>
+                is the world's largest and preeminent platform of
+                African-published scholarly journals. AJOL strikes to increase
+                global &amp; continental online access, awareness, quality
+                &amp; use of African-published, peer-reviewed research
+              </p>
+              <a href="https://www.ajol.info/"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+
+        
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="DOAJ"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="data:image/jpeg;base64,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"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">DOAJ</span> is a categorized,
+                searchable links to free, full text, quality controlled
+                scientific and scholarly journals
+              </p>
+              <a href="http://www.doaj.org/"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+
+          <div class="bg-[#0c0e41]/70 p-0.5 rounded-lg transition duration-200 hover:scale-[1.01]">
+            <div class="bg-white rounded-md p-4">
+              <img
+                  alt="Academic Journals"
+                  class="h-15 md:h-20 object-cover object-center"
+                  src="https://mue.cblibrary.ng/assets/academic_journals-BhEZ8QUv.jpg"
+                />
+              <p class="mt-4 text-black md:text-lg">
+                <span class="font-bold">Academic Journals</span> The database
+                provides access to research materials in financial, legal or
+                technical barriers. Journal articles are accessible and usable
+                via accessing the database online address from any location in
+                the world.
+              </p>
+              <a href="https://academicjournals.org/"
+                class="py-2 px-4 mt-4 border-[#0c0e41] border-2 text-[#0c0e41] hover:bg-[#0c0e41] transition duration-300 hover:text-white block w-fit rounded-md font-medium"
+                target="_blank">visit now</a>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+      <main class="animate-fade-in py-8">
+        <div class="w-[90%] max-w-7xl mx-auto">
+          <h1 class="text-[#466d9b] text-2xl my-6 text-center relative pb-3 font-bold tracking-tight">
+            e-Journals Collection
+            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-48 max-w-[40vw] h-1 bg-gradient-to-r from-[#466d9b] to-transparent rounded"></span>
+          </h1>
+          <p class="text-center text-gray-500 text-base mb-5 mx-auto max-w-[62ch]">
+            Discover open and subscribed scholarly journals across disciplines. Filter by category or search titles.
+          </p>
+
+          <div class="flex gap-4 flex-wrap items-center justify-between my-4">
+            <div class="relative flex-1 min-w-[260px]">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+          <i class="fas fa-search text-gray-400"></i>
+        </span>
+              <input
+          id="searchInput"
+          type="search"
+          placeholder="Search journal titles & platforms…"
+          aria-label="Search e-journals"
+          class="w-full py-3 px-10 border border-gray-200 rounded-xl bg-white outline-none text-gray-800 transition-all duration-200 focus:border-blue-300 focus:ring-4 focus:ring-blue-100"
+        />
+              <button class="absolute right-2 top-1/2 -translate-y-1/2 border-none bg-transparent text-base cursor-pointer text-gray-400" id="clearSearch" aria-label="Clear search">
+          <i class="fas fa-times"></i>
+        </button>
+            </div>
+            <div class="flex gap-2 flex-wrap" id="chips">
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5 border-blue-300 bg-blue-50 active" data-cat="all">All</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Administrative Studies">Administrative</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Communication Technology">Communication Tech</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Business Management">Business Mgmt</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Engineering">Engineering</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Computer Science">Computer Science</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Mathematics">Mathematics</button>
+              <button class="px-3 py-2 border border-gray-200 rounded-full bg-white text-gray-900 text-sm cursor-pointer select-none transition-all duration-200 hover:-translate-y-0.5" data-cat="Extensive E-Journal Links">Extensive Links</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2" id="grid">
+            <!-- Administrative Studies -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Administrative Studies">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Administrative Studies <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.tandfonline.com/toc/rabr20/current" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Accounting and
+                    Business Research <span class="ml-auto text-sm opacity-60">tandfonline.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.ajol.info/browseBy/category?categoryId=14" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> AJOL Accounting
+                    Journals <span class="ml-auto text-sm opacity-60">ajol.info</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Communication Technology -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Communication Technology">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Communication Technology <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.ajol.info/browseBy/category?categoryId=20" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Library &
+                    Information Science (AJOL) <span class="ml-auto text-sm opacity-60">ajol.info</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Business Management -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Business Management">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Business Management <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.tandfonline.com/action/doSearch?AllField=business+management" target="_blank"
+                    rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Taylor & Francis
+                    – Business Management <span class="ml-auto text-sm opacity-60">tandfonline.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.sciencedirect.com/browse/journals-and-books?contentType=JL&accessType=openAccess&subject=business-management-and-accounting"
+                    target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> ScienceDirect –
+                    Business & Accounting (OA) <span class="ml-auto text-sm opacity-60">sciencedirect.com</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Engineering -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Engineering">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Engineering <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.sciencedirect.com/browse/journals-and-books?contentType=JL&accessType=openAccess&subject=electrical-and-electronic-engineering"
+                    target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Electrical &
+                    Electronic Engineering (OA) <span class="ml-auto text-sm opacity-60">sciencedirect.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.sciencedirect.com/browse/journals-and-books?contentType=JL&accessType=openAccess&subject=mechanical-engineering"
+                    target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Mechanical
+                    Engineering (OA) <span class="ml-auto text-sm opacity-60">sciencedirect.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.sciencedirect.com/browse/journals-and-books?contentType=JL&accessType=openAccess&subject=civil-and-structural-engineering"
+                    target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Civil &
+                    Structural Engineering (OA) <span class="ml-auto text-sm opacity-60">sciencedirect.com</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Computer Science -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Computer Science">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Computer Science <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.tandfonline.com/action/doSearch?ConceptID=4255" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Taylor & Francis
+                    – Computer Science <span class="ml-auto text-sm opacity-60">tandfonline.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.sciencedirect.com/browse/journals-and-books?contentType=JL&accessType=openAccess&subject=computer-science-general"
+                    target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> ScienceDirect –
+                    Computer Science (OA) <span class="ml-auto text-sm opacity-60">sciencedirect.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.ajol.info/browseBy/category?categoryId=27" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> AJOL – Computer
+                    Science <span class="ml-auto text-sm opacity-60">ajol.info</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Mathematics -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Mathematics">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Mathematics <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.tandfonline.com/topic/allsubjects/ma?ConceptID=4271" target="_blank"
+                    rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Taylor & Francis
+                    – Mathematics <span class="ml-auto text-sm opacity-60">tandfonline.com</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            <!-- Extensive Links -->
+            <details
+              class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-200 hover:-translate-y-0.5 open:shadow-lg"
+              open data-cat="Extensive E-Journal Links">
+              <summary class="list-none flex items-center justify-between gap-4 bg-slate-100 p-4 cursor-pointer">
+                <span class="font-bold text-blue-800 flex items-center gap-2">
+            Extensive E-Journal Links <span class="text-xs text-slate-900 bg-slate-200 border border-slate-300 rounded-full px-2 py-1" data-count>0</span>
+                </span>
+                <span class="transition-transform duration-200 open:rotate-180">
+            <i class="fas fa-chevron-down"></i>
+          </span>
+              </summary>
+              <ul class="p-4">
+                <li>
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://academicjournals.org/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Academic Journals
+                    <span class="ml-auto text-sm opacity-60">academicjournals.org</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://journals.sagepub.com/home/sgo" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> SAGE Open
+                    <span class="ml-auto text-sm opacity-60">sagepub.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> National Library
+                    of Medicine (PubMed) <span class="ml-auto text-sm opacity-60">ncbi.nlm.nih.gov</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://academic.oup.com/journals" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Oxford Academic
+                    Journals <span class="ml-auto text-sm opacity-60">oup.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.intechopen.com/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> IntechOpen
+                    Journals <span class="ml-auto text-sm opacity-60">intechopen.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.springeropen.com/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> SpringerOpen
+                    <span class="ml-auto text-sm opacity-60">springeropen.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.tandfonline.com/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Taylor & Francis
+                    Online <span class="ml-auto text-sm opacity-60">tandfonline.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://babel.hathitrust.org/cgi/mb?a=listis&c=1930843488" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> HathiTrust
+                    Journals <span class="ml-auto text-sm opacity-60">hathitrust.org</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.nationmaster.com/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> NationMaster
+                    <span class="ml-auto text-sm opacity-60">nationmaster.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.elsevier.com/open-access/open-access-journals" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> Elsevier – Open
+                    Access Journals <span class="ml-auto text-sm opacity-60">elsevier.com</span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a class="flex items-center gap-2 p-3 border border-transparent rounded-xl transition-all duration-200 text-gray-800 hover:bg-gray-50 hover:border-gray-200 hover:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-blue-300 focus-visible:outline-offset-2"
+                    href="https://www.biomedcentral.com/search/" target="_blank" rel="noopener">
+                    <span class="text-base opacity-70"><i class="fas fa-external-link-alt"></i></span> BioMed Central
+                    <span class="ml-auto text-sm opacity-60">biomedcentral.com</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="hidden text-center p-8 bg-white border border-dashed border-gray-300 rounded-2xl text-gray-600"
+            id="emptyState">
+            No matches. Try a different keyword or switch category.
+          </div>
+        </div>
+      </main>
+
+      <div
+        id="_rht_toaster"
+        style="
+          position: fixed;
+          z-index: 9999;
+          inset: 16px;
+          pointer-events: none;
+        "
+      ></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
